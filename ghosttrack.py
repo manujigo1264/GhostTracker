@@ -12,20 +12,20 @@ import sys
 
 # Separate functions for each functionality
 def print_banner():
-    stderr.writelines(f"""{Gr}
+    stderr.writelines("""
        ________               __      ______                __  
       / ____/ /_  ____  _____/ /_    /_  __/________ ______/ /__
      / / __/ __ \/ __ \/ ___/ __/_____/ / / ___/ __ `/ ___/ //_/
     / /_/ / / / / /_/ (__  ) /_/_____/ / / /  / /_/ / /__/ ,<   
     \____/_/ /_/\____/____/\__/     /_/ /_/   \__,_/\___/_/|_|  
 
-              {Wh}[ + ]  Refactored by 0xtron  [ + ]  
+              [ + ]  Refactored by 0xtron  [ + ]  
 
-        {Wh}[ 1 ] {Gr}IP Tracker
+        [ 1 ] IP Tracker
 
-        {Wh}[ 2 ] {Gr}Phone Tracker
+        [ 2 ] Phone Tracker
 
-        {Wh}[ 0 ] {Gr}Exit
+        [ 0 ] Exit
     """)
 
 def track_ip(ip):
@@ -37,9 +37,9 @@ def track_ip(ip):
         print(f"Error: {e}")
         return
 
-    print(f'{Wh}============= {Gr}SHOW INFORMATION IP ADDRESS {Wh}=============')
+    print(f'============= SHOW INFORMATION IP ADDRESS =============')
     # Print the results
-    print(f"{Wh}\n IP target       :{Gr}", ip)
+    print(f"\n IP target       :", ip)
     # ... Additional lines for printing IP information ...
     
 def track_phone(phone_number):
@@ -51,7 +51,7 @@ def track_phone(phone_number):
         print(f"Error: {e}")
         return
 
-    print(f"\n {Wh}========== {Gr}SHOW INFORMATION PHONE NUMBERS {Wh}==========")
+    print(f"\n ========== SHOW INFORMATION PHONE NUMBERS ==========")
     # Print the results
     # ... Additional lines for printing phone number information ...
 
@@ -59,24 +59,24 @@ def main():
     while True:
         os.system('clear')
         print_banner()
-        input_user = input(f'\n   {Wh}@Ghost~# {Gr}')
+        input_user = input('\n   @Ghost~# ')
 
         if input_user == '1':
             os.system('clear')
-            ip = input(f"{Wh}\n Enter IP target : {Gr}")
+            ip = input("\n Enter IP target : ")
             track_ip(ip)
 
         elif input_user == '2':
             os.system('clear')
-            phone_number = input(f"\n {Wh}Enter phone number target {Gr}Ex [+6281xxxxxxxxx] {Wh}: {Gr}")
+            phone_number = input("\n Enter phone number target Ex [+6281xxxxxxxxx] : ")
             track_phone(phone_number)
 
         elif input_user == '0':
-            print(f"\n  {Wh}[{Ye}!{Wh}] {Ye}THANK'S FOR USING TOOL {Ye}GHOST-TRACK !")
+            print("\n  [!] THANK'S FOR USING TOOL GHOST-TRACK !")
             break
 
         else:
-            print(f" {Ye}Opss no option !")
+            print(" Opss no option !")
             time.sleep(2)
 
 if __name__ == '__main__':
